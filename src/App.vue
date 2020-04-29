@@ -33,6 +33,14 @@ body {
   background: linear-gradient(to botton, #555, #999);
   background-attachment: fixed;
 }
+</style>
+
+<style scoped>
+/* .content >>> .robot-name {
+  .content /deep/ .robot-name {
+  color: red;
+  border: 2px solid blue;
+} */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
