@@ -52,7 +52,7 @@
         position="bottom"
         @partSelected="part => selectedRobot.base=part"/>
     </div>
-    <div>
+    <!-- <div>
       <h1>Cart</h1>
       <table>
         <thead>
@@ -68,7 +68,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -128,7 +128,9 @@ export default {
         + robot.base.cost;
       // this.cart.push({ ...robot, cost });
       // eslint-disable-next-line prefer-object-spread
-      this.cart.push(Object.assign({}, robot, { cost }));
+      this.$store.commit('addRobotToCart', Object.assign({}, robot, { cost }));
+      // eslint-disable-next-line prefer-object-spread
+      // this.cart.push(Object.assign({}, robot, { cost }));
       this.addedToCart = true;
     },
   },
@@ -244,14 +246,14 @@ export default {
   padding: 3px;
   font-size: 16px;
 }
-td, th {
-  text-align: left;
-  padding: 5px;
-  padding-right: 20px;
-}
-.cost {
-  text-align: right;
-}
+// td, th {
+//   text-align: left;
+//   padding: 5px;
+//   padding-right: 20px;
+// }
+// .cost {
+//   text-align: right;
+// }
 .sale-border{
   border:3px solid red ;
 }
